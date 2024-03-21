@@ -14,14 +14,14 @@ class _DetailpageState extends State<detail> {
   bool isClicked = false;
   @override
   Widget build(BuildContext context) {
-    final buku = widget.title;
+    final title = widget.title;
     return Scaffold(
       appBar: AppBar(
         iconTheme: IconThemeData(
           color: Colors.black,
         ),
         title: Text(
-          buku. title,
+          title. title,
           style: TextStyle(color: Colors.black),
         ),
         backgroundColor: Colors.amber,
@@ -33,12 +33,15 @@ class _DetailpageState extends State<detail> {
             width: MediaQuery.of(context).size.width*0.3,
             child: ListView.builder(
                 scrollDirection: Axis.horizontal,
-                itemCount: 3,
+                itemCount: 1,
                 itemBuilder: (context, index){
-                  return Image.network(buku.imageLink[index]);
+                  return Image.network(listBuku[index].imageLink);
                 }),
           ),
-          Text(buku.title),
+          Text(title.title),
+          Text(title.author),
+          Text(title.country),
+          Text(title.language),
         ],
       ),
     );

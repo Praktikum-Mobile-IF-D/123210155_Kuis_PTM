@@ -79,7 +79,7 @@ class _LoginpageState extends State<halamanlogin> {
             });
             Navigator.pushReplacement(context,
                 MaterialPageRoute(builder: (context) {
-                  return halamanhome();
+                  return home();
                 }));
           } else {
             setState(() {
